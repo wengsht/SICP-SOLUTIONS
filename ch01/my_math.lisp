@@ -1,0 +1,6 @@
+(define (% n m)
+  (remainder n m))
+(define (even? n)
+  (= (% n 2) 0))
+(define (integer-div n m)
+  (floor (/ n m)))

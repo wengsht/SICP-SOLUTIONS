@@ -1,0 +1,10 @@
+(define (money x)
+  (cond ((= x 1) 1)
+        ((= x 2) 5)
+        ((= x 3) 10)
+        ((= x 4) 25)
+        ((= x 5) 50)
+        (else 100)))
+(define (count-change amount)
+  (_count-change amount 5))
+

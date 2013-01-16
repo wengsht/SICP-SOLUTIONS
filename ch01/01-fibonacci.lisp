@@ -1,0 +1,7 @@
+(define (fib n)
+  (cond ((< n 3) 1)
+        (else (_fib (- n 2) 1 1))))
+(define (_fib n a b)
+  (cond ((= n 1) (+ a b))
+        (else (_fib (- n 1) (+ a b) a))))
+(fib 7)
