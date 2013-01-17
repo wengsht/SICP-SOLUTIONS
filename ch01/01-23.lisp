@@ -1,0 +1,16 @@
+(define (pow2 n)
+  (* n n))
+(define (smallest-divisor n)
+  (find-divisor n 2))
+(define (next-test test-factor)
+  (if (<= test-factor 2) 3 (+ test-factor 2)))
+(define (find-divisor n test-factor)
+  (cond ((> (pow2 test-factor) n) n)
+        ((= (remainder n test-factor) 0) test-factor)
+        (else (find-divisor n (next-test test-factor)))))
+(smallest-divisor 199)
+(smallest-divisor 1999)
+(smallest-divisor 19999)
+(remainder 19999 7)
+; it is not 2 because other operator will take some times
+
