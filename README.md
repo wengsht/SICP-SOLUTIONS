@@ -1,2 +1,5 @@
 # EX SOLUTIONS FOR SICP 
-code excutable in [racket]: http://www.plt-scheme.org
+
+play lisp with [racket](http://www.plt-scheme.org) and Vim
+
+
