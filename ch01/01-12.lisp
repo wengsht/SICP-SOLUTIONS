@@ -1,5 +1,0 @@
-(define (p n m)
-  (cond ((< n m) 0)
-        ((or (= n 1) (= m 1)) 1)
-        (else (+ (p (- n 1) m) (p (- n 1) (- m 1))))))
-(p 6 3)
