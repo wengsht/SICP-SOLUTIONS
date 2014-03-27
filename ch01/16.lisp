@@ -1,0 +1,13 @@
+(define (fast-expt b n)
+  (define (even? n)
+    (= (remainder n 2) 0))
+  (define (inner-expt n x res)
+    (cond ((= n 0) res)
+          ((even? n) (inner-expt (/ n 2) (* x x) res))
+          (else (inner-expt (/ (- n 1) 2) (* x x) (* res x)))))
+  (inner-expt n b 1))
+
+(fast-expt 2 6)
+(fast-expt 3 6)
+(fast-expt 3 0)
+(fast-expt 3 1)

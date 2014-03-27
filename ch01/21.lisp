@@ -1,0 +1,13 @@
+(define (small-divisor n)
+  (define (divide? x n)
+    (= 0 (remainder n x)))
+  (define (square x) (* x x))
+  (define (inner-divisor n x)
+    (cond ((> (square x) n) n)
+          ((divide? x n) x)
+          (else (inner-divisor n (+ x 1)))))
+  (inner-divisor n 2))
+
+(small-divisor 199)
+(small-divisor 1999)
+(small-divisor 19999)
