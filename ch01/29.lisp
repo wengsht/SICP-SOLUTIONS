@@ -1,0 +1,23 @@
+(define (identity x) x)
+(define (sum term a nxt b)
+  (if (> a b)
+    0
+    (+ (term a)
+       (sum term (nxt a) nxt b))))
+(define (simp f a b n)
+  (define (nxt x)
+    (+ x
+       (* 2 
+          (/ (- b a)
+             n))))
+  (define (simp-f x)
+    (+ (f x)
+       (* 4 (f (nxt x)))
+       (f (nxt (nxt x)))))
+  (* (/ (/ (- b a) n) 3)
+     (sum simp-f a nxt b)))
+(define (cube x) (* x x x))
+(simp cube 0.0 1.0 100)
+(simp cube 0.0 1.0 1000)
+(simp cube 0.0 1.0 10000)
+(simp cube 0.0 1.0 9999)

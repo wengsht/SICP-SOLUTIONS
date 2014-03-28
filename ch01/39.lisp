@@ -1,0 +1,20 @@
+; iterator
+(define (cont-frac n d k)
+  (define (inner cnt res)
+    (cond ((< cnt 1) res)
+          (else (inner 
+                  (- cnt 1) 
+                  (/ (n cnt) 
+                     (+ res 
+                        (d cnt)))))))
+  (inner k 0.0))
+(define (tan-cf x k)
+  (cont-frac (lambda (i) 
+               (cond ((= i 1) x)
+                     (else (- (square x)))))
+             (lambda (i)
+               (- (* 2 i)
+                  1))
+             k))
+(tan-cf 1.0 10000)
+(tan 1.0)
