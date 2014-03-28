@@ -1,5 +1,3 @@
 # EX SOLUTIONS FOR SICP 
 
-play lisp with [racket](http://www.plt-scheme.org) and Vim
-
-
+play lisp with [mit-scheme](http://www.plt-scheme.or://www.gnu.org/software/mit-scheme/), [vim-slime](http://github.com/jpalardy/vim-slime), tmux and Vim
